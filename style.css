@@ -60,6 +60,8 @@ nav {
   width: 40%;
   height: 90%;
   cursor: pointer;
+  position: relative;
+  left: 50px;
 }
 
 .menuBar {
@@ -175,7 +177,7 @@ nav {
   background: inherit;
   position: absolute;
   top: 0;
-  left: 51px;
+  left: 25px;
   filter: brightness(130%);
   border-radius: 3px;
   display: flex;
@@ -233,7 +235,7 @@ i {
   }
 
   .logo img {
-    width: 40%;
+    width: 60%;
     height: 70%;
     cursor: pointer;
   }
@@ -317,7 +319,7 @@ i {
     gap: 2px;
     list-style: none;
     position: relative;
-    right: 50px;
+    right: 60px;
   }
 
   .social ul li {
@@ -341,7 +343,7 @@ i {
     background: inherit;
     position: absolute;
     top: 0;
-    left: 51px;
+    left: 25px;
     filter: brightness(130%);
     border-radius: 3px;
     display: flex;
@@ -396,7 +398,7 @@ i {
   }
 
   .logo img {
-    width: 200px;
+    width: 150px;
     position: relative;
     left: 150px;
   }
@@ -462,5 +464,9 @@ i {
     align-items: center;
     position: relative;
     left: 15px;
+  }
+
+  .sliderS {
+    display: none !important;
   }
 }
