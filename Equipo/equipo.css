@@ -1,0 +1,242 @@
+:root {
+  ---color-primario1: rgb(23, 22, 22);
+  ---color-primario2: #622369;
+  ---color-primario3: #0490c6;
+  ---color-primario4: #d47e0f;
+  ---color-primario5: #d9ca01;
+  ---text-default: "open Sans";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(---text-default);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(---color-primario1);
+}
+
+.titulos {
+  font-size: 40px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: antiquewhite;
+  margin: 10px auto;
+}
+
+.subtitulos {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* seccion equipo */
+
+.teamContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.teamContent .teamGroup {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group {
+  width: 60%;
+  height: 300px;
+  position: absolute;
+}
+
+.teamContent .selfteam {
+  width: 100%;
+  height: 100%;
+  margin: 35px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+
+.persona {
+  position: relative;
+}
+
+.teamContent .selfteam img {
+  width: 300px;
+  height: 400ps;
+  filter: grayscale(90%);
+  border-radius: 15%;
+  transition: all 1s ease;
+}
+
+.teamContent .selfteam img:hover {
+  filter: grayscale(0%);
+  box-shadow: 2px 2px 3px var(---color-primario2), 3px 3px 3px #00000033;
+  background-size: 70% 3px;
+}
+
+.teamContent .selfteam .persona .persona-info {
+  width: 80%;
+  height: 100%;
+  visibility: hidden;
+  position: relative;
+  left: 25px;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 450px;
+  color: antiquewhite;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.teamContent .selfteam .persona:hover .persona-info {
+  visibility: visible;
+  transition: all 5s;
+}
+
+@media screen and (max-width: 500px) {
+  .teamContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+  }
+
+  .titulos {
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: antiquewhite;
+    margin: 10px auto;
+  }
+
+  .group {
+    width: 90%;
+    height: 20%;
+    position: absolute;
+  }
+
+  .selfteam {
+    position: relative;
+    top: 100px;
+    height: 500px;
+    width: 600px;
+    perspective: 500px;
+    transform-style: preserve-3d;
+  }
+
+  .persona {
+    width: 200px;
+    height: 250px;
+    box-shadow: 0 0 10 #0000004d;
+    border: 1px solid #bbb;
+    border-radius: 25px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 800ms ease-in-out;
+    overflow: hidden;
+  }
+
+  .selfteam .persona img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .persona:nth-of-type(8) {
+    left: 60%;
+    transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-200px);
+    opacity: 0;
+    z-index: 2;
+  }
+
+  .persona:nth-of-type(7) {
+    left: 55%;
+    transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-150px);
+    opacity: 0.25;
+    z-index: 2;
+  }
+
+  .persona:nth-of-type(6) {
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-100px);
+    opacity: 0.5;
+    z-index: 5;
+  }
+
+  .persona:nth-of-type(5) {
+    left: 45%;
+    transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-50px);
+    opacity: 0.75;
+    z-index: 10;
+  }
+
+  .persona:nth-of-type(4) {
+    left: 40%;
+    transform: translate(-50%, -50%) rotateY(-10deg);
+    z-index: 5;
+  }
+
+  .persona:nth-of-type(3) {
+    left: 35%;
+    transform: translate(-50%, -50%) rotateY(-10deg);
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .persona:nth-of-type(2) {
+    left: 30%;
+    transform: translate(-50%, -50%) rotateY(-10deg);
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .persona:first-of-type {
+    left: 30%;
+    transform: translate(-50%, -50%) rotateY(-10deg);
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .teamContent .selfteam .persona .persona-info {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    left: 25px;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 450px;
+    color: antiquewhite;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}

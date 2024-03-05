@@ -385,7 +385,7 @@ i {
 
 @media screen and (max-width: 500px) {
   nav {
-    position: fixed;
+    position: relative;
     top: 0;
     margin-top: 0;
   }
