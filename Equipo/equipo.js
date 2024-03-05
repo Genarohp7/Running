@@ -6,6 +6,6 @@ if (anchoVentana < 500) {
     let $last = $selfTeam.firstElementChild;
     $last.remove();
     $selfTeam.appendChild($last);
-  }, 1000);
+  }, 2000);
 } else {
 }

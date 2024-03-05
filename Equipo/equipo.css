@@ -123,7 +123,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 70px auto;
+    margin: 5px auto;
   }
 
   .titulos {
@@ -134,7 +134,7 @@ body {
     letter-spacing: 1px;
     font-weight: 600;
     color: antiquewhite;
-    margin: 10px auto;
+    margin: 5px auto;
   }
 
   .group {
@@ -145,7 +145,7 @@ body {
 
   .selfteam {
     position: relative;
-    top: 100px;
+    top: 130px;
     height: 500px;
     width: 600px;
     perspective: 500px;
@@ -154,7 +154,7 @@ body {
 
   .persona {
     width: 200px;
-    height: 250px;
+    height: 300px;
     box-shadow: 0 0 10 #0000004d;
     border: 1px solid #bbb;
     border-radius: 25px;
@@ -166,9 +166,25 @@ body {
     overflow: hidden;
   }
 
+  .teamContent .selfteam .persona .persona-info {
+    width: 150px;
+    height: 20px;
+    bottom: 27px;
+    font-size: 10px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+    background-color: rgba(255, 255, 255, 0.5);
+    visibility: visible;
+  }
+
   .selfteam .persona img {
     width: 100%;
     height: 100%;
+    filter: grayscale(0);
   }
 
   .persona:nth-of-type(8) {
@@ -224,19 +240,5 @@ body {
     transform: translate(-50%, -50%) rotateY(-10deg);
     z-index: 5;
     opacity: 0;
-  }
-
-  .teamContent .selfteam .persona .persona-info {
-    width: 80%;
-    height: 100%;
-    position: relative;
-    left: 25px;
-    border-radius: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 450px;
-    color: antiquewhite;
-    background-color: rgba(255, 255, 255, 0.5);
   }
 }
