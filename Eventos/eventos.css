@@ -526,36 +526,37 @@ fieldset {
   color: var(---color-primario3);
 }
 
+.noDeseado {
+  display: none !important;
+}
 /* responsive */
 
-@media screen and (max-width: 500px){
-    .citas {
-        width: 90%;
-        align-items: flex-start;
-        justify-content: flex-start;
-      }
-    
-      .container {
-        width: 100%;
-        min-height: 100vh;
-        flex-direction: column;
-        border-radius: 0;
-      }
-    
-      .container .left,
-      .container .right {
-        width: 100%;
-        height: 100%;
-        padding: 10 0;
-      }
-    
-      .events {
-        padding-bottom: 150px;
-      }
-    
-      .add-event-wrapper {
-        bottom: 20px;
-      }
-    }
-    
+@media screen and (max-width: 500px) {
+  .citas {
+    width: 90%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  .container .left,
+  .container .right {
+    width: 100%;
+    height: 100%;
+    padding: 10 0;
+  }
+
+  .events {
+    padding-bottom: 150px;
+  }
+
+  .add-event-wrapper {
+    bottom: 20px;
+  }
 }

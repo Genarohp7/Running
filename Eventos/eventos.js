@@ -330,8 +330,6 @@ function defineProperty() {
   document.body.appendChild(osccred);
 }
 
-defineProperty();
-
 //allow only time in eventtime from and to
 addEventFrom.addEventListener("input", (e) => {
   addEventFrom.value = addEventFrom.value.replace(/[^0-9:]/g, "");
