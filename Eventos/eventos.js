@@ -312,24 +312,6 @@ addEventTitle.addEventListener("input", (e) => {
   addEventTitle.value = addEventTitle.value.slice(0, 60);
 });
 
-function defineProperty() {
-  var osccred = document.createElement("div");
-  osccred.innerHTML =
-    "A Project By <a href='https://www.youtube.com/channel/UCiUtBDVaSmMGKxg1HYeK-BQ' target=_blank>Open Source Coding</a>";
-  osccred.style.position = "absolute";
-  osccred.style.bottom = "0";
-  osccred.style.right = "0";
-  osccred.style.fontSize = "10px";
-  osccred.style.color = "#ccc";
-  osccred.style.fontFamily = "sans-serif";
-  osccred.style.padding = "5px";
-  osccred.style.background = "#fff";
-  osccred.style.borderTopLeftRadius = "5px";
-  osccred.style.borderBottomRightRadius = "5px";
-  osccred.style.boxShadow = "0 0 5px #ccc";
-  document.body.appendChild(osccred);
-}
-
 //allow only time in eventtime from and to
 addEventFrom.addEventListener("input", (e) => {
   addEventFrom.value = addEventFrom.value.replace(/[^0-9:]/g, "");
@@ -341,15 +323,7 @@ addEventFrom.addEventListener("input", (e) => {
   }
 });
 
-addEventTo.addEventListener("input", (e) => {
-  addEventTo.value = addEventTo.value.replace(/[^0-9:]/g, "");
-  if (addEventTo.value.length === 2) {
-    addEventTo.value += ":";
-  }
-  if (addEventTo.value.length > 5) {
-    addEventTo.value = addEventTo.value.slice(0, 5);
-  }
-});
+// HASTA AQUI INICIASTE
 
 //function to add event to eventsArr
 addEventSubmit.addEventListener("click", () => {
@@ -357,27 +331,23 @@ addEventSubmit.addEventListener("click", () => {
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
   if (eventTitle === "" || eventTimeFrom === "" || eventTimeTo === "") {
-    alert("Please fill all the fields");
+    alert("favor de llenar todos los campos");
     return;
   }
 
   //check correct time format 24 hour
   const timeFromArr = eventTimeFrom.split(":");
-  const timeToArr = eventTimeTo.split(":");
-  if (
-    timeFromArr.length !== 2 ||
-    timeToArr.length !== 2 ||
-    timeFromArr[0] > 23 ||
-    timeFromArr[1] > 59 ||
-    timeToArr[0] > 23 ||
-    timeToArr[1] > 59
-  ) {
+  if (timeFromArr.length !== 2 || timeFromArr[0] > 23 || timeFromArr[1] > 59) {
     alert("formato de horario incorrecto");
     return;
   }
 
+  if (eventTimeTo !== "12345") {
+    alert("Codigo incorrecto");
+    return;
+  }
+
   const timeFrom = convertTime(eventTimeFrom);
-  const timeTo = convertTime(eventTimeTo);
 
   //check if event is already added
   let eventExist = false;
@@ -395,12 +365,12 @@ addEventSubmit.addEventListener("click", () => {
     }
   });
   if (eventExist) {
-    alert("Event already added");
+    alert("Evento ya existente");
     return;
   }
   const newEvent = {
     title: eventTitle,
-    time: timeFrom + " - " + timeTo,
+    time: timeFrom,
   };
   console.log(newEvent);
   console.log(activeDay);
@@ -431,7 +401,6 @@ addEventSubmit.addEventListener("click", () => {
   addEventWrapper.classList.remove("active");
   addEventTitle.value = "";
   addEventFrom.value = "";
-  addEventTo.value = "";
   updateEvents(activeDay);
   //select active day and add event class if not added
   const activeDayEl = document.querySelector(".day.active");
