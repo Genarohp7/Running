@@ -53,16 +53,20 @@ body {
 }
 
 .teamContent .teamGroup {
-  width: 100%;
-  height: 300px;
+  width: 100vw;
+  height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url(../contenido/team\ group\ 1.png);
+  background-size: 100% 95%;
+  background-repeat: no-repeat;
 }
 
 .group {
+  display: none;
   width: 60%;
-  height: 300px;
+  height: 60vh;
   position: absolute;
 }
 
@@ -117,8 +121,8 @@ body {
 
 @media screen and (max-width: 500px) {
   .teamContent {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,7 +141,13 @@ body {
     margin: 5px auto;
   }
 
+  .teamContent .teamGroup {
+    width: 100vw;
+    height: 40vh;
+  }
+  
   .group {
+    display: none;
     width: 90%;
     height: 20%;
     position: absolute;
@@ -145,22 +155,23 @@ body {
 
   .selfteam {
     position: relative;
-    top: 130px;
-    height: 500px;
-    width: 600px;
+    height: 40vh;
+    width: 100vw;
+    top: 50px;
     perspective: 500px;
     transform-style: preserve-3d;
+    margin-bottom: 10px;
   }
 
   .persona {
-    width: 200px;
-    height: 300px;
+    width: 50vw;
+    height: 35vh;
     box-shadow: 0 0 10 #0000004d;
     border: 1px solid #bbb;
     border-radius: 25px;
     box-sizing: border-box;
     position: absolute;
-    top: 50%;
+    top: 120px;
     transform: translateY(-50%);
     transition: 800ms ease-in-out;
     overflow: hidden;
