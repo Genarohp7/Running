@@ -285,7 +285,7 @@ function updateEvents(date) {
   });
   if (events === "") {
     events = `<div class="no-event">
-            <h3>Sin Citas</h3>
+            <h3>Sin Eventos</h3>
         </div>`;
   }
   eventsContainer.innerHTML = events;
@@ -412,7 +412,7 @@ addEventSubmit.addEventListener("click", () => {
 //function to delete event when clicked on event
 eventsContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("event")) {
-    if (confirm("Estas Segura de querer eliminar la Cita")) {
+    if (confirm("Estas Seguro de eliminar el Evento?")) {
       const eventTitle = e.target.children[0].children[1].innerHTML;
       eventsArr.forEach((event) => {
         if (
