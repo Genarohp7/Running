@@ -43,14 +43,14 @@ body {
 
 nav {
   width: 100%;
-  height: 120px;
+  height: 20vh;
   margin: 10px auto;
   display: flex;
 }
 
 .logo {
-  width: 25%;
-  height: 100%;
+  width: 25vw;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,15 +58,15 @@ nav {
 
 .logo img {
   width: 40%;
-  height: 90%;
+  height: 100%;
   cursor: pointer;
   position: relative;
   left: 50px;
 }
 
 .menuBar {
-  width: 85%;
-  height: 120px;
+  width: 85vw;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,7 +218,7 @@ i {
 
 /* mediaquerys */
 
-@media screen and (max-width: 850px) {
+@media screen and (min-width: 481px) and (max-width: 949px) {
   nav {
     width: 100%;
     height: 120px;
@@ -385,6 +385,10 @@ i {
 
 @media screen and (max-width: 480px) {
   nav {
+    width: 100%;
+    height: 20vh;
+    margin: 10px auto;
+    display: flex;
     position: relative;
     top: 0;
     margin-top: 0;
@@ -421,6 +425,8 @@ i {
   }
 
   .menuBar .menu ul {
+    width: 100vw;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -448,7 +454,7 @@ i {
     display: block;
     color: rgb(14, 13, 13);
     position: absolute;
-    left: 50px;
+    left: 80px;
     top: 50px;
   }
 
