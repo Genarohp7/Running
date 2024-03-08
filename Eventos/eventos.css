@@ -585,8 +585,9 @@ fieldset {
   }
 
   .add-event {
-    bottom: 675px;
-    right: 300px;
+    position: relative;
+    left: 30px;
+    top: 50px;
   }
 
   .add-event-wrapper {
